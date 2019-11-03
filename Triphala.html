@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.imgContainer {
+  float: left;
+  width: 25%;
+  padding: 0px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+</style>
+	<title>Triphala</title>
+</head>
+<body>
+<div class="navbar">
+	  <a href="index.html">Home</a>
+	  <a href="#news">News</a>
+	  <div class="dropdown">
+	  	<button class="dropbtn">
+      		<i class="fa fa-caret-down"></i>
+    	</button>
+    	<div class="dropdown-content">
+      		<a href="#">Link 1</a>
+      		<a href="#">Link 2</a>
+      		<a href="#">Link 3</a>
+    	</div>
+    </div>
+</div>
+<div>
+	<div align="left">
+		<img src="triphala.jpg" alt="triphala" width=210><div class="overlay"><div class="text"></div></div>
+	</div>
+	<div align="">
+		<p>Triphala literally means three fruits. The three fruits contained in Triphala are Amalaki (Emblica Officinalis), Bibhitaki (Terminalia Belerica) and Haritaki (Terminalia Chebula). Triphala is tridoshic--equally balancing for Vata, Pitta and Kapha. This Triphala powder is a powerful rejuvenating and detoxifying formulation that cleanses the colon and supports the entire GI tract, improves digestion, assimilation of nutrients and elimination.</p>
+	</div>
+</div>
+
+</body>
+</html>

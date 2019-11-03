@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<style>
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.imgContainer {
+  float: left;
+  width: 25%;
+  padding: 0px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+.form-popup {
+  display: none;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+}
+/*.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}*/
+
+</style>
+
+
+<title>E-commerce website</title>
+</head>
+
+	<body bgcolor="white">
+	<div class="navbar">
+	  <a href="index.html">Home</a>
+	  <a href="#news">News</a>
+	  <div class="dropdown">
+	  	<button class="dropbtn">
+      		<i class="fa fa-caret-down"></i>
+    	</button>
+    	<div class="dropdown-content">
+      		<a href="#">Link 1</a>
+      		<a href="#">Link 2</a>
+      		<a href="#">Link 3</a>
+    	</div>
+    </div>
+  <div align="right">
+
+  <a class="open-button" onclick="openForm()">Login & Signup</a>
+  <div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+  </div>
+</div>
+	<table border="0" width="100%" bgcolor="white">
+		<tr>
+		<td align="right">
+			<input id="searchbar" onkeyup="myFunction()"
+        name="search" type="text" placeholder="Search for Products,Ingredients amd more">
+        <i class="fa fa-search"></i>
+		</td>                                                               
+		<th><img src="cart.png" height="30%"></th>
+		</tr>
+	</table>
+	<p></p>
+	<div class="image123" width="100%">
+	    <div class="imgContainer">
+	        <img src="indulekha.jpg" alt="indulekha" width=210><div class="overlay"><div class="text"></div></div>
+	        <a href="Indulekha.html">Indulekha</a>
+	    </div>
+	    <div class="imgContainer">
+	    	<img src="triphala.jpg" alt="triphala" width=210><div class="overlay"><div class="text"></div></div>
+	    	<a href="Triphala.html">Triphala</a>
+	    </div>
+	    <div class="imgContainer">
+	    	<img src="charcoalfacewash.jpg" alt="charcoalfacewash" width=210><div class="overlay"><div class="text"></div></div>
+	    	<a href="CharcoalFacewash.html">CharcoalFacewash</a>
+	    </div>
+	    <div class="imgContainer">
+	    	<img src="Herbal Hair Oil.jpg" alt="Herbal Hair Oil" width=210><div class="overlay"><div class="text"></div></div>
+	    	<a href="Herbal Hair Oil.html">Herbal Hair Oil</a>
+	    </div>
+	    <div class="imgContainer">
+	    	<img src="Aswagandhadi Lehyam.jpg" alt="Kerala Ayurveda Aswagandhadi Lehyam" width=210><div class="overlay"><div class="text"></div></div>
+	    	<a href="Aswagandhadi Lehyam.html">Aswagandhadi Lehyam</a>
+	    </div>
+	    <div class="imgContainer">
+	    	<img src="Replenishing Night Beauty Balm.png" alt="Ojas Glow Replenishing Night Beauty Balm" width=210><div class="overlay"><div class="text"></div></div>
+	    	<a href="Replenishing Night Beauty Balm.html">Replenishing Night Beauty Balm</a>
+	    </div>
+	    <div class="imgContainer">
+	    	<img src="Plant Based Collagen.jpg" alt="OZiva Plant Based Collagen" width=160><div class="overlay"><div class="text"></div></div>
+	    	<a href="Plant Based Collagen.html">Plant Based Collagen</a>
+	    </div>
+	    <div class="imgContainer">
+	    	<img src="juice.jpg" alt="juice" width=210><div class="overlay"><div class="text"></div></div>
+	    	<a href="Juice.html">Juice</a>
+	    </div>
+	    
+	</div>
+<script type="text/javascript">
+	function myFunction () 
+	{
+		let input = document.getElementById('searchbar').value
+		input=input.toLowerCase(); 
+    	let list = document.getElementsByClassName('imgContainer'); 
+      
+    for (i = 0; i < list.length; i++) 
+    {  
+    	
+        if (!list[i].innerHTML.toLowerCase().includes(input)) 
+        { 
+        //if (!list[i].a.toLowerCase().includes(input)) { 
+            list[i].style.display="none"; 
+        } 
+        else 
+        { 
+            list[i].style.display="list-item";                  
+        } 
+        } 
+	}
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+
+
+</body>
+</html>
